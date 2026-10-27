@@ -1,0 +1,24 @@
+# main에 push되면 빌드 후 Cloudflare Workers 정적 에셋(coupon.pinda.kr)에 배포합니다.
+# 필요한 GitHub 시크릿: CLOUDFLARE_API_TOKEN (Workers Edit 권한), CLOUDFLARE_ACCOUNT_ID — pindaai 저장소와 같은 값
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency: { group: deploy, cancel-in-progress: false }
+permissions: { contents: read }
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      # OG 썸네일 렌더러(snsogg)는 이 저장소의 og/ 폴더에 복사본이 있음
+      - run: npm ci --prefix og
+      - run: node scripts/build.mjs && node scripts/og.mjs
+      - run: npx wrangler@4 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

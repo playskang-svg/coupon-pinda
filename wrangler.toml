@@ -1,0 +1,13 @@
+# 정적 사이트(dist/)를 Cloudflare Workers 정적 에셋으로 배포 → coupon.pinda.kr
+# 배포: npm run deploy  (빌드 후 npx wrangler deploy)
+name = "coupon-pinda"
+compatibility_date = "2026-10-01"
+
+routes = [
+  { pattern = "coupon.pinda.kr", custom_domain = true },
+]
+
+[assets]
+directory = "dist"
+html_handling = "auto-trailing-slash"
+not_found_handling = "404-page"

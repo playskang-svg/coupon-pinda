@@ -1,0 +1,10 @@
+{
+  "name": "coupon-pinda",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "build": "node scripts/build.mjs && node scripts/og.mjs",
+    "deploy": "npm run build && npx wrangler deploy"
+  }
+}

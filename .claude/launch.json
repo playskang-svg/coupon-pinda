@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "coupon-pinda", "runtimeExecutable": "npx", "runtimeArgs": ["--yes", "serve", "dist", "-l", "4199"], "port": 4199 }
+  ]
+}

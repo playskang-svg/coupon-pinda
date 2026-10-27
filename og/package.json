@@ -1,0 +1,9 @@
+{
+  "name": "snsogg",
+  "private": true,
+  "type": "module",
+  "description": "SNS 공유용 카드형 자동 썸네일(OG 이미지) 생성기",
+  "dependencies": {
+    "@cf-wasm/og": "0.5.0"
+  }
+}
