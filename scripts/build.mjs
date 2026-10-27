@@ -43,11 +43,15 @@ function expiry(notes) {
 }
 const pct = (t) => (t.match(/(\d+)\s*%/) || [, ""])[1];
 
+const extra = JSON.parse((await readFile("data/extra.json", "utf8")).replace(/^﻿/, ""));
+// 원본 사이트의 자기 제휴링크 경유 전용 코드 — 우리 링크로는 적용 안 됨
+const EXCLUDE = new Set(["COUDAL", "LPAGDKR10", "LINKPR26087K", "즐거운대만호텔"]);
+
 const stores = src.filter((s) => META[s.slug]).map((s) => {
   const [name, cat, color, icon] = META[s.slug];
   const l = links[s.slug] || {};
   const go = l.url || l.official;
-  const items = s.items.map((i) => ({ ...i, title: rebrand(i.title), badge: rebrand(i.badge), notice: rebrand(i.notice), desc: rebrand(i.desc), notes: i.notes.map(rebrand), link: go, expiry: expiry(i.notes), pct: pct(i.title) }));
+  const items = [...(extra[s.slug] || []).map((i) => ({ expired: false, ...i, link: i.link || go })), ...s.items.filter((i) => !EXCLUDE.has(i.code))].map((i) => ({ ...i, title: rebrand(i.title), badge: rebrand(i.badge), notice: rebrand(i.notice), desc: rebrand(i.desc), notes: i.notes.map(rebrand), link: go, expiry: expiry(i.notes), pct: pct(i.title) }));
   const best = Math.max(0, ...items.map((i) => +i.pct || 0));
   return { slug: s.slug, name, cat, color, icon, go, affiliate: !!l.url, items, best, codes: items.filter((i) => i.code).length, title: rebrand(s.title), intro: rebrand(s.intro) };
 });
