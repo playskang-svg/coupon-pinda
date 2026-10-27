@@ -6,7 +6,7 @@ const SITE = "https://coupon.pinda.kr";
 const BRAND = "쿠폰핀다";
 const TAGLINE = "할인쿠폰 프로모션코드";
 const src = JSON.parse(await readFile("data/source.json", "utf8"));
-const links = JSON.parse(await readFile("data/links.json", "utf8"));
+const links = JSON.parse((await readFile("data/links.json", "utf8")).replace(/^﻿/, "")); // PowerShell이 BOM을 붙일 수 있음
 
 // 스토어 표시 정보 (카테고리·색·아이콘)
 const META = {

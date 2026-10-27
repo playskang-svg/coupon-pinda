@@ -1,26 +1,105 @@
-{
-  "_": "스토어별 내 제휴 링크. url 이 비어 있으면 공식 사이트(official)로 보냅니다. 세시간전 딥링크는 3hoursahead 값에 넣으세요.",
-  "agoda": { "url": "https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1729890", "official": "https://www.agoda.com/ko-kr/", "source": "agoda-partners cid=1729890" },
-  "tripcom": { "url": "", "official": "https://kr.trip.com/" },
-  "myrealtrip": { "url": "", "official": "https://www.myrealtrip.com/" },
-  "hotelscom": { "url": "", "official": "https://kr.hotels.com/" },
-  "usimsa": { "url": "", "official": "https://www.usimsa.com/" },
-  "kkday": { "url": "", "official": "https://www.kkday.com/ko" },
-  "klook": { "url": "", "official": "https://www.klook.com/ko/" },
-  "expedia": { "url": "", "official": "https://www.expedia.co.kr/" },
-  "yanolja": { "url": "", "official": "https://nol.yanolja.com/" },
-  "hotelscombined": { "url": "", "official": "https://www.hotelscombined.co.kr/" },
-  "triple": { "url": "", "official": "https://triple.guide/" },
-  "airalo": { "url": "", "official": "https://www.airalo.com/ko" },
-  "skyscanner": { "url": "", "official": "https://www.skyscanner.co.kr/" },
-  "nolinterparktour": { "url": "", "official": "https://nol.interpark.com/" },
-  "rakuten": { "url": "", "official": "https://travel.rakuten.com/kor/ko-kr/" },
-  "aliexpress": { "url": "", "official": "https://ko.aliexpress.com/" },
-  "coupang": { "url": "", "official": "https://www.coupang.com/" },
-  "temu": { "url": "", "official": "https://www.temu.com/kr" },
-  "gmarket": { "url": "", "official": "https://www.gmarket.co.kr/" },
-  "zigzag": { "url": "", "official": "https://zigzag.kr/" },
-  "iherb": { "url": "", "official": "https://kr.iherb.com/" },
-  "shein": { "url": "", "official": "https://kr.shein.com/" },
-  "farfetch": { "url": "", "official": "https://www.farfetch.com/kr/" }
+﻿{
+    "_":  "스토어별 내 제휴 링크. url 비면 official로 연결. 3ha.in 링크는 세시간전(3hoursahead.com) 발급. 쿠팡은 세시간전 승인 필요, 호텔스컴바인·라쿠텐은 홈/지역 URL 거부되어 미발급.",
+    "agoda":  {
+                  "url":  "https://3ha.in/r/833088",
+                  "official":  "https://www.agoda.com/ko-kr/",
+                  "source":  "3hoursahead 26.10.27"
+              },
+    "tripcom":  {
+                    "url":  "https://3ha.in/r/833090",
+                    "official":  "https://kr.trip.com/",
+                    "source":  "3hoursahead 26.10.27"
+                },
+    "myrealtrip":  {
+                       "url":  "https://3ha.in/r/833127",
+                       "official":  "https://www.myrealtrip.com/",
+                       "source":  "3hoursahead 26.10.27"
+                   },
+    "hotelscom":  {
+                      "url":  "https://3ha.in/r/833091",
+                      "official":  "https://kr.hotels.com/",
+                      "source":  "3hoursahead 26.10.27"
+                  },
+    "usimsa":  {
+                   "url":  "https://3ha.in/r/802301",
+                   "official":  "https://www.usimsa.com/",
+                   "source":  "3hoursahead 26.10.27"
+               },
+    "kkday":  {
+                  "url":  "https://3ha.in/r/833138",
+                  "official":  "https://www.kkday.com/ko",
+                  "source":  "3hoursahead 26.10.27"
+              },
+    "klook":  {
+                  "url":  "https://3ha.in/r/805745",
+                  "official":  "https://www.klook.com/ko/",
+                  "source":  "3hoursahead 26.10.27"
+              },
+    "expedia":  {
+                    "url":  "https://3ha.in/r/833092",
+                    "official":  "https://www.expedia.co.kr/",
+                    "source":  "3hoursahead 26.10.27"
+                },
+    "yanolja":  {
+                    "url":  "https://3ha.in/r/833095",
+                    "official":  "https://nol.yanolja.com/",
+                    "source":  "3hoursahead 26.10.27"
+                },
+    "hotelscombined":  {
+                           "url":  "",
+                           "official":  "https://www.hotelscombined.co.kr/"
+                       },
+    "triple":  {
+                   "url":  "",
+                   "official":  "https://triple.guide/"
+               },
+    "airalo":  {
+                   "url":  "",
+                   "official":  "https://www.airalo.com/ko"
+               },
+    "skyscanner":  {
+                       "url":  "",
+                       "official":  "https://www.skyscanner.co.kr/"
+                   },
+    "nolinterparktour":  {
+                             "url":  "",
+                             "official":  "https://nol.interpark.com/"
+                         },
+    "rakuten":  {
+                    "url":  "",
+                    "official":  "https://travel.rakuten.com/kor/ko-kr/"
+                },
+    "aliexpress":  {
+                       "url":  "",
+                       "official":  "https://ko.aliexpress.com/"
+                   },
+    "coupang":  {
+                    "url":  "",
+                    "official":  "https://www.coupang.com/"
+                },
+    "temu":  {
+                 "url":  "",
+                 "official":  "https://www.temu.com/kr"
+             },
+    "gmarket":  {
+                    "url":  "https://3ha.in/r/833097",
+                    "official":  "https://www.gmarket.co.kr/",
+                    "source":  "3hoursahead 26.10.27"
+                },
+    "zigzag":  {
+                   "url":  "",
+                   "official":  "https://zigzag.kr/"
+               },
+    "iherb":  {
+                  "url":  "",
+                  "official":  "https://kr.iherb.com/"
+              },
+    "shein":  {
+                  "url":  "",
+                  "official":  "https://kr.shein.com/"
+              },
+    "farfetch":  {
+                     "url":  "",
+                     "official":  "https://www.farfetch.com/kr/"
+                 }
 }
